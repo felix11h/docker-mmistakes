@@ -21,7 +21,6 @@ RUN gem update
 
 RUN gem install minimal-mistakes-jekyll --no-doc --no-ri
 
-RUN bundle
 
 # RUN gem install jekyll-feed -v '0.9.3'
 # RUN gem install jekyll-seo-tag -v '2.4.0'
