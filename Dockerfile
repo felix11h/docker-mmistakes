@@ -20,6 +20,7 @@ RUN gem update
 # RUN gem install jekyll jekyll-paginate jekyll-sitemap therubyracer json --no-doc --no-ri
 
 RUN gem install minimal-mistakes-jekyll rake --no-doc --no-ri
+RUN gem install bundler --force
 #RUN bundle install
 
 # RUN gem install jekyll-feed -v '0.9.3'
