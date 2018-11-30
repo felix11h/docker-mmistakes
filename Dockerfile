@@ -21,7 +21,13 @@ RUN gem update
 
 RUN gem install minimal-mistakes-jekyll rake --no-doc --no-ri
 RUN gem install bundler --force
-#RUN bundle install
+
+WORKDIR /
+RUN git clone https://github.com/Felix11H/docker-mmistakes gemspec
+WORKDIR gemspec
+RUN ls
+RUN bundle install
+
 
 # RUN gem install jekyll-feed -v '0.9.3'
 # RUN gem install jekyll-seo-tag -v '2.4.0'
