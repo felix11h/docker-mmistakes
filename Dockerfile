@@ -15,7 +15,7 @@ RUN ./configure
 RUN make
 RUN make install
 
-RUN localedef -i en_US -f UTF-8 en_US.UTF-8
+#RUN localedef -i en_US -f UTF-8 en_US.UTF-8
 
 RUN gem update --system
 RUN gem update
@@ -32,9 +32,9 @@ RUN bundle install
 
 
 # Set default locale for the environment
-# ENV LC_ALL C.UTF-8
-# ENV LANG en_US.UTF-8
-# ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
 
 # RUN gem install jekyll-feed -v '0.9.3'
 # RUN gem install jekyll-seo-tag -v '2.4.0'
